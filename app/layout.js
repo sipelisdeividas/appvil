@@ -4,6 +4,8 @@ import { Providers } from "./providers";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
+import { Footer } from "./footer";
+import { Header } from "./header";
 
 const font = Oswald({ subsets: ["latin"], weight: "400" });
 
@@ -25,8 +27,10 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <NextTopLoader color="#E11D48" />
+          <Header />
           <main className="min-h-screen">{children}</main>
           <Toaster />
+          <Footer />
         </Providers>
       </body>
     </html>

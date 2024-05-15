@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Oswald } from "next/font/google";
 import { Providers } from "./providers";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
 import { Footer } from "./footer";

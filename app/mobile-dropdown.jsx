@@ -9,6 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 import { ListFilter } from "lucide-react";
 import Image from "next/image";
@@ -38,27 +39,34 @@ export function MobileDropDown() {
               />
             </Link>
           </SheetTitle>
-          <SheetDescription>Kai rašome – mes kuriame</SheetDescription>
+
+          <SheetClose>
+            <SheetDescription>Kai rašome – mes kuriame</SheetDescription>
+          </SheetClose>
         </SheetHeader>
         <div className="py-8">
           <ul className="flex flex-col justify-center items-center uppercase space-y-4">
             <li>
-              <Link
-                className="flex"
-                href="/projects"
-                aria-label="Pamatykite mūsų atliktus darbus"
-              >
-                Mūsų darbai
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  className="flex"
+                  href="/projects"
+                  aria-label="Pamatykite mūsų atliktus darbus"
+                >
+                  Mūsų darbai
+                </Link>
+              </SheetClose>
             </li>
             <li>
-              <Link
-                className="flex"
-                href="/contact"
-                aria-label="Susisiekite su mumis"
-              >
-                Susisiekimas
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  className="flex"
+                  href="/contact"
+                  aria-label="Susisiekite su mumis"
+                >
+                  Susisiekimas
+                </Link>
+              </SheetClose>
             </li>
             {session.data && (
               <li>

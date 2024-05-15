@@ -31,26 +31,12 @@ export function ProjectsCard({ _id, name, banner }) {
               <Image
                 className="rounded-xl shadow-md"
                 src={banner ?? ""}
-                height="110"
-                width="110"
+                height="100"
+                width="100"
                 alt={name ?? ""}
               />
-              {/* <img
-                className="rounded-lg shadow-md w-[90px] h-[90px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] xl:h-[160px] xl:w-[160px]"
-                src={banner}
-                alt={name}
-              /> */}
             </div>
           </CardItem>
-
-          {/* <CardItem
-            as="p"
-            translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-10 dark:text-neutral-300"
-          >
-            {description}
-          </CardItem> */}
-
           <div className="flex justify-start text-start items-start mt-10">
             <CardItem
               translateZ={20}

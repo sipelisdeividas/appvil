@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowBigRight } from "lucide-react";
 
 const transition = {
   type: "spring",
@@ -41,6 +42,15 @@ export const MenuItem = ({ setActive, active, item, children }) => {
                 >
                   {children}
                 </motion.div>
+                <div className="flex justify-center items-center text-center pb-6">
+                  {" "}
+                  <Link
+                    className="flex justify-center items-center text-center py-2 px-2  bg-primary rounded"
+                    href="/projects"
+                  >
+                    <ArrowBigRight /> Visi darbai
+                  </Link>
+                </div>
               </motion.div>
             </div>
           )}
@@ -61,16 +71,17 @@ export const Menu = ({ setActive, children }) => {
   );
 };
 
-export const ProjectItem = ({ title, description, href, src }) => {
+export const ProjectItem = ({ title, href, src }) => {
   return (
     <div>
       <Link href={href} className="flex space-x-2">
         <Image
-          src={src}
-          width={140}
-          height={70}
-          alt={title}
           className="flex-shrink-0 rounded-md shadow-2xl"
+          src={src}
+          width={100}
+          height={50}
+          alt={title}
+          style={{ height: "auto", width: "auto" }}
         />
         <div>
           <h4 className="text-lg font-bold mb-1 text-black dark:text-white">

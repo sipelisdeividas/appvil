@@ -49,29 +49,29 @@ export function Navbar({ className }) {
           <div className="hidden sm:block">
             <ul className="flex items-center space-x-10 uppercase">
               <li>
-                <Link
+                {/* <Link
                   href="/projects"
                   aria-label="Pamatykite mūsų atliktus darbus"
+                > */}
+                <MenuItem
+                  setActive={setActive}
+                  active={active}
+                  item="Atlikti darbai"
                 >
-                  <MenuItem
-                    setActive={setActive}
-                    active={active}
-                    item="Atlikti darbai"
-                  >
-                    <div className="text-sm grid grid-cols-2 gap-10 p-4">
-                      {projects.slice(-4).map((project) => (
-                        <div key={project._id}>
-                          <ProjectItem
-                            title={project.name ?? ""}
-                            href={`/projects/${project._id}`}
-                            src={project.banner ?? ""}
-                            description={project.description ?? ""}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </MenuItem>
-                </Link>
+                  <div className="text-sm grid grid-cols-2 gap-10 p-4">
+                    {projects.slice(-4).map((project) => (
+                      <div key={project._id}>
+                        <ProjectItem
+                          title={project.name ?? ""}
+                          href={`/projects/${project._id}`}
+                          src={project.banner ?? ""}
+                          description={project.description ?? ""}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </MenuItem>
+                {/* </Link> */}
               </li>
               <li>
                 <Link

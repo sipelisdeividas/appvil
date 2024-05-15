@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowBigRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const transition = {
   type: "spring",
@@ -45,10 +45,10 @@ export const MenuItem = ({ setActive, active, item, children }) => {
                 <div className="flex justify-center items-center text-center pb-6">
                   {" "}
                   <Link
-                    className="flex justify-center items-center text-center py-2 px-2 text-sm text-white bg-primary rounded"
+                    className="flex justify-center items-center text-center text-xl py-2 px-2 uppercase text-black dark:text-white"
                     href="/projects"
                   >
-                    <ArrowBigRight /> Visi darbai
+                    Visi darbai <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               </motion.div>

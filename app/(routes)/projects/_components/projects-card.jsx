@@ -42,9 +42,9 @@ export function ProjectsCard({ name, banner }) {
               translateZ={20}
               as={Link}
               href={`/projects/${name}`}
-              className="flex items-start justify-start px-4 py-2 rounded-xl font-normal"
+              className="flex items-start justify-start px-4 py-2 rounded-xl font-normal uppercase"
             >
-              SKAITYTI DAUGIAU
+              Skaityti daugiau
               <ArrowRight className="w-5 h-5 ml-2" />
             </CardItem>
           </div>

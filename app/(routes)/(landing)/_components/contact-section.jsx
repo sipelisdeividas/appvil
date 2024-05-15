@@ -4,7 +4,7 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-5xl uppercase font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
-            Kontaktai
+            Mus Rasite
           </h3>
         </div>
         <div className="mt-8 lg:mt-16">
@@ -24,7 +24,7 @@ export function ContactSection() {
               <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                 <div className="px-6 py-4">
                   <h3 className="text-base md:text-lg font-medium text-gray-900 dark:text-white">
-                    Mes Įsikūrę
+                    Adresas
                   </h3>
                   <p className="mt-1 text-sm md:text-base text-gray-600 dark:text-gray-400">
                     32566, J. Žemgulio g. 46 -108, 35239 Panevėžys

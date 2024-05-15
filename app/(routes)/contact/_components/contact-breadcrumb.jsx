@@ -19,7 +19,7 @@ export function ContactBreadcrumb() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Kontaktai</BreadcrumbPage>
+            <BreadcrumbPage>Susisiekimas</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

@@ -9,6 +9,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Menu, MenuItem, ProjectItem } from "@/components/ui/navbar-menu";
 import { MobileDropDown } from "./mobile-dropdown";
 import { UserDropdown } from "./user-dropdown";
+import { APP_NAME } from "@/lib/config";
 
 export function Navbar({ className }) {
   const [active, setActive] = useState(null);
@@ -18,9 +19,7 @@ export function Navbar({ className }) {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get(
-          "https://appvil-eu.vercel.app/api/projects"
-        );
+        const res = await axios.get(`${APP_NAME}/api/projects`);
         setProjects(res.data.projects);
       } catch (error) {
         console.error("Error fetching projects:", error);

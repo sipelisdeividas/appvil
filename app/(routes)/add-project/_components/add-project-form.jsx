@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
 import { crudSchema } from "@/shared/utils/form/crudSchema";
+import { APP_NAME } from "@/lib/config";
 
 export function AddProjectForm() {
   const { toast } = useToast();
@@ -34,16 +35,13 @@ export function AddProjectForm() {
 
   async function onSubmit(values) {
     try {
-      const response = await fetch(
-        "https://appvil-eu.vercel.app/api/projects",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(values),
-        }
-      );
+      const response = await fetch(`${APP_NAME}/api/projects`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
       if (response.ok) {
         router.push("/projects");

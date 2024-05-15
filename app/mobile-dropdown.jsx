@@ -21,7 +21,7 @@ export function MobileDropDown() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" aria-label="Menu">
           <ListFilter />
         </Button>
       </SheetTrigger>

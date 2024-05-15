@@ -1,6 +1,8 @@
+import { APP_NAME } from "@/lib/config";
+
 export const fetchProject = async (id) => {
   try {
-    const res = await fetch(`https://appvil-eu.vercel.app/api/projects/${id}`, {
+    const res = await fetch(`${APP_NAME}/api/projects/${id}`, {
       method: "GET",
       cache: "no-store",
     });

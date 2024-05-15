@@ -18,6 +18,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { Smile } from "lucide-react";
 import { contactSchema } from "@/shared/utils/form/contactSchema";
+import { APP_NAME } from "@/lib/config";
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -37,7 +38,7 @@ export function ContactForm() {
   async function onSubmit(data) {
     try {
       setLoading(true);
-      const res = await fetch("https://appvil-eu.vercel.app/api/contact", {
+      const res = await fetch(`${APP_NAME}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

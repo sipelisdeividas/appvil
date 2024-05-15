@@ -32,11 +32,11 @@ export default async function ProjectPage({ params }) {
   );
 }
 
-// export async function generateMetadata({ params }) {
-//   const { name } = params;
-//   const { project } = await fetchProject(name);
+export async function generateMetadata({ params }) {
+  const { name } = params;
+  const { project } = await fetchProject(name);
 
-//   return {
-//     title: project.name,
-//   };
-// }
+  return {
+    title: project.name,
+  };
+}

@@ -34,13 +34,16 @@ export function AddProjectForm() {
 
   async function onSubmit(values) {
     try {
-      const response = await fetch("http://localhost:3000/api/projects", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        "https://appvil-eu.vercel.app/api/projects",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
 
       if (response.ok) {
         router.push("/projects");

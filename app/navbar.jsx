@@ -18,7 +18,9 @@ export function Navbar({ className }) {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/projects");
+        const res = await axios.get(
+          "https://appvil-eu.vercel.app/api/projects"
+        );
         setProjects(res.data.projects);
       } catch (error) {
         console.error("Error fetching projects:", error);

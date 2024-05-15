@@ -1,6 +1,6 @@
 export const fetchProject = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/projects/${id}`, {
+    const res = await fetch(`https://appvil-eu.vercel.app/api/projects/${id}`, {
       method: "GET",
       cache: "no-store",
     });

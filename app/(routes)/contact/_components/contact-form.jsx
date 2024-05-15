@@ -37,7 +37,7 @@ export function ContactForm() {
   async function onSubmit(data) {
     try {
       setLoading(true);
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://appvil-eu.vercel.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

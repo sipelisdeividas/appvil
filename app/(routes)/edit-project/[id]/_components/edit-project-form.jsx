@@ -43,13 +43,16 @@ export function EditProjectForm({
 
   async function onSubmit(values) {
     try {
-      const res = await fetch(`http://localhost:3000/api/projects/${_id}`, {
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const res = await fetch(
+        `https://appvil-eu.vercel.app/api/projects/${_id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       if (!res.ok) {
         throw new Error("Failed to update project");
       }

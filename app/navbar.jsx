@@ -78,7 +78,7 @@ export function Navbar({ className }) {
                   className="hover:text-primary"
                   aria-label="Susisiekite su mumis"
                 >
-                  Kontaktai
+                  Susisiekimas
                 </Link>
               </li>
               {status === "authenticated" && (

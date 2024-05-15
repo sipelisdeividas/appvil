@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const formSchema = z.object({
+export const crudSchema = z.object({
   name: z
     .string()
     .min(4, {

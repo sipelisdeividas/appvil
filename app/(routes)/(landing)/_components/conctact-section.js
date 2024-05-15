@@ -4,7 +4,7 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-5xl uppercase font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
-            Kontaktinė Dalis
+            Kontaktai
           </h3>
         </div>
         <div className="mt-8 lg:mt-16">

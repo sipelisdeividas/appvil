@@ -33,7 +33,7 @@ export function Footer() {
                 className="hover:text-primary"
                 aria-label="Susisiekite su mumis"
               >
-                Kontaktai
+                Susisiekimas
               </Link>
             </li>
           </ul>

@@ -57,7 +57,7 @@ export function MobileDropDown() {
                 href="/contact"
                 aria-label="Susisiekite su mumis"
               >
-                Kontaktai
+                Susisiekimas
               </Link>
             </li>
             {session.data && (

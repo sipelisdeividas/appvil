@@ -1,5 +1,4 @@
 "use client";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { formSchema } from "@/shared/utils/form/schema";
+import { crudSchema } from "@/shared/utils/form/crudSchema";
 
 export function EditProjectForm({
   _id,
@@ -30,7 +29,7 @@ export function EditProjectForm({
   const router = useRouter();
 
   const form = useForm({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(crudSchema),
     defaultValues: {
       name: name,
       banner: banner,
@@ -59,6 +58,7 @@ export function EditProjectForm({
         description: "Projektas buvo sėkmingai atnaujintas",
       });
       router.push(`/projects/${_id}`);
+      router.refresh();
     } catch (error) {
       console.log(error);
     }

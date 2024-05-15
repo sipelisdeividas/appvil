@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export function ProjectsCard({ _id, name, banner }) {
+export function ProjectsCard({ name, banner }) {
   return (
     <>
       <CardContainer key={name} className="inter-var">
@@ -41,7 +41,7 @@ export function ProjectsCard({ _id, name, banner }) {
             <CardItem
               translateZ={20}
               as={Link}
-              href={`/projects/${_id}`}
+              href={`/projects/${name}`}
               className="flex items-start justify-start px-4 py-2 rounded-xl font-normal"
             >
               SKAITYTI DAUGIAU

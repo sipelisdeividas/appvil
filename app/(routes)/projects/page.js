@@ -20,16 +20,7 @@ export default async function ProjectsPage() {
       <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <div key={project._id}>
-            <ProjectsCard
-              _id={project._id}
-              name={project.name}
-              banner={project.banner}
-              description={project.description}
-              firstImage={project.firstImage}
-              secondImage={project.secondImage}
-              thirdImage={project.thirdImage}
-              fourthImage={project.fourthImage}
-            />
+            <ProjectsCard name={project.name} banner={project.banner} />
           </div>
         ))}
       </div>

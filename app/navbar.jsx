@@ -49,10 +49,6 @@ export function Navbar({ className }) {
           <div className="hidden sm:block">
             <ul className="flex items-center space-x-10 uppercase">
               <li>
-                {/* <Link
-                  href="/projects"
-                  aria-label="Pamatykite mūsų atliktus darbus"
-                > */}
                 <MenuItem
                   setActive={setActive}
                   active={active}
@@ -63,7 +59,7 @@ export function Navbar({ className }) {
                       <div key={project._id}>
                         <ProjectItem
                           title={project.name ?? ""}
-                          href={`/projects/${project._id}`}
+                          href={`/projects/${project.name ?? ""}`}
                           src={project.banner ?? ""}
                           description={project.description ?? ""}
                         />
@@ -71,7 +67,6 @@ export function Navbar({ className }) {
                     ))}
                   </div>
                 </MenuItem>
-                {/* </Link> */}
               </li>
               <li>
                 <Link

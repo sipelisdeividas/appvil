@@ -15,7 +15,7 @@ export function TableItem({ _id, name, banner }) {
         <TableCell>
           <Link
             className="hover:text-primary"
-            href={`/projects/${_id}`}
+            href={`/projects/${name}`}
             aria-label={`Pamatykite projektą ${name}`}
           >
             {name}
@@ -23,7 +23,7 @@ export function TableItem({ _id, name, banner }) {
         </TableCell>
         <TableCell>
           <Link
-            href={`/projects/${_id}`}
+            href={`/projects/${name}`}
             aria-label={`Pamatykite projektą ${name}`}
           >
             <Image
@@ -38,7 +38,7 @@ export function TableItem({ _id, name, banner }) {
         <TableCell className="text-right space-y-4 md:space-y-0 md:space-x-4">
           <Button variant="ghost" size="sm" asChild>
             <Link
-              href={`/edit-project/${_id}`}
+              href={`/edit-project/${name}`}
               aria-label={`Redaguokite projektą ${name}`}
             >
               <Pencil className="h-5 w-5" />

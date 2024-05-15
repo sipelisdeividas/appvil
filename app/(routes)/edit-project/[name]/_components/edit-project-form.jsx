@@ -17,7 +17,6 @@ import { crudSchema } from "@/shared/utils/form/crudSchema";
 import { APP_NAME } from "@/lib/config";
 
 export function EditProjectForm({
-  _id,
   name,
   banner,
   description,
@@ -44,7 +43,7 @@ export function EditProjectForm({
 
   async function onSubmit(values) {
     try {
-      const res = await fetch(`${APP_NAME}/api/projects/${_id}`, {
+      const res = await fetch(`${APP_NAME}/api/projects/${name}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
@@ -58,7 +57,7 @@ export function EditProjectForm({
         title: "Projektas atnaujintas",
         description: "Projektas buvo sėkmingai atnaujintas",
       });
-      router.push(`/projects/${_id}`);
+      router.push(`/projects`);
       router.refresh();
     } catch (error) {
       console.log(error);

@@ -45,7 +45,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
                 <div className="flex justify-center items-center text-center pb-6">
                   {" "}
                   <Link
-                    className="flex justify-center items-center text-center py-2 px-2  bg-primary rounded"
+                    className="flex justify-center items-center text-center py-2 px-2 text-sm text-white bg-primary rounded"
                     href="/projects"
                   >
                     <ArrowBigRight /> Visi darbai

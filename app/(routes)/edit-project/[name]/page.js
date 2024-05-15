@@ -5,10 +5,9 @@ import { EditProjectForm } from "./_components/edit-project-form";
 
 export default async function AddProjectPage({ params }) {
   unstable_noStore();
-  const { id } = params;
-  const { project } = await fetchProject(id);
+  const { name: paramName } = params;
+  const { project } = await fetchProject(paramName);
   const {
-    _id,
     name,
     banner,
     description,
@@ -27,7 +26,6 @@ export default async function AddProjectPage({ params }) {
       </div>
       <div className="space-y-8">
         <EditProjectForm
-          _id={_id}
           name={name}
           banner={banner}
           description={description}

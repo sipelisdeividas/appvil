@@ -1,8 +1,8 @@
 import { APP_NAME } from "@/lib/config";
 
-export const fetchProject = async (id) => {
+export const fetchProject = async (name) => {
   try {
-    const res = await fetch(`${APP_NAME}/api/projects/${id}`, {
+    const res = await fetch(`${APP_NAME}/api/projects/${name}`, {
       method: "GET",
       cache: "no-store",
     });

@@ -6,8 +6,8 @@ import { NoCarousel } from "./_components/no-carousel";
 
 export default async function ProjectPage({ params }) {
   unstable_noStore();
-  const { id } = params;
-  const { project } = await fetchProject(id);
+  const { name } = params;
+  const { project } = await fetchProject(name);
 
   return (
     <div className="container mx-auto w-full items-center justify-center antialiased pb-8 md:pb-0 pt-24 md:pt-36">
@@ -32,10 +32,11 @@ export default async function ProjectPage({ params }) {
   );
 }
 
-export async function generateMetadata({ params }) {
-  const { id } = params;
-  const { project } = await fetchProject(id);
-  return {
-    title: project.name,
-  };
-}
+// export async function generateMetadata({ params }) {
+//   const { name } = params;
+//   const { project } = await fetchProject(name);
+
+//   return {
+//     title: project.name,
+//   };
+// }

@@ -44,11 +44,12 @@ export function AddProjectForm() {
       });
 
       if (response.ok) {
-        router.push("/projects");
         toast({
           title: "Projektas pridėtas",
           description: "Naujasis projektas buvo sėkmingai pridėtas!",
         });
+        router.push("/projects");
+        router.refresh();
       } else {
         throw new Error("Failed to create a project");
       }

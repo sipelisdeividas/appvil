@@ -1,5 +1,5 @@
 import { unstable_noStore } from "next/cache";
-import { fetchProjects } from "@/shared/utils/fetchProjects";
+import { fetchProjects } from "@/lib/shared/fetchProjects";
 import { ScrollableHero } from "./_components/scrollable-hero";
 import { ContactSection } from "./_components/contact-section";
 import { HeroParallax } from "@/components/ui/hero-parallax";

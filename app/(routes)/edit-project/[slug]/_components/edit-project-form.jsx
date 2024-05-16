@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { crudSchema } from "@/shared/utils/form/crudSchema";
+import { crudSchema } from "@/lib/shared/form/crudSchema";
 import { APP_NAME } from "@/lib/config";
 
 export function EditProjectForm({

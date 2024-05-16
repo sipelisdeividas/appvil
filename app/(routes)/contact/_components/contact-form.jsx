@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { Smile } from "lucide-react";
-import { contactSchema } from "@/shared/utils/form/contactSchema";
+import { contactSchema } from "@/lib/shared/form/contactSchema";
 import { APP_NAME } from "@/lib/config";
 
 export function ContactForm() {

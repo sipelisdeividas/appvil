@@ -58,10 +58,10 @@ export function Navbar({ className }) {
                     {projects.slice(-4).map((project) => (
                       <div key={project._id}>
                         <ProjectItem
-                          title={project.name ?? ""}
-                          href={`/projects/${project.slug ?? ""}`}
-                          src={project.banner ?? ""}
-                          description={project.description ?? ""}
+                          title={project.name}
+                          href={`/projects/${project.slug}`}
+                          src={project.banner}
+                          description={project.description}
                         />
                       </div>
                     ))}

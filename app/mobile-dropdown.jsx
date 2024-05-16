@@ -53,7 +53,7 @@ export function MobileDropDown() {
                   href="/projects"
                   aria-label="Pamatykite mūsų atliktus darbus"
                 >
-                  Mūsų darbai
+                  Atlikti Darbai
                 </Link>
               </SheetClose>
             </li>

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connect from "@/db";
 import Project from "@/db/models/Project";
-import { slugify } from "@/shared/utils/slugify";
+import { slugify } from "@/lib/shared/slugify";
 
 export async function GET(request, { params }) {
   const { slug } = params;

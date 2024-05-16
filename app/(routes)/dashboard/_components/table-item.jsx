@@ -28,10 +28,10 @@ export function TableItem({ _id, name, slug, banner }) {
           >
             <Image
               className="rounded"
-              src={banner ?? ""}
+              src={banner}
               width="80"
               height="80"
-              alt={name ?? ""}
+              alt={name}
             />
           </Link>
         </TableCell>

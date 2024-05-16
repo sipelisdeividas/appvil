@@ -125,11 +125,11 @@ export const ProjectCard = ({ project, translate }) => {
         aria-label={`Pamatykite projektą ${project.name}`}
       >
         <Image
-          src={project.banner ?? ""}
+          src={project.banner}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={project.name ?? ""}
+          alt={project.name}
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 bg-black pointer-events-none"></div>

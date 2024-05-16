@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Eraser } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { deleteProject } from "@/shared/utils/deleteProject";
+import { deleteProject } from "@/lib/shared/deleteProject";
 
 export function RemoveButton({ _id }) {
   const router = useRouter();
@@ -22,7 +22,7 @@ export function RemoveButton({ _id }) {
 
   const handleRemoveProject = async () => {
     try {
-      await deleteProject(_id ?? "");
+      await deleteProject(_id);
       router.refresh();
       toast({
         title: "Projektas pašalintas",

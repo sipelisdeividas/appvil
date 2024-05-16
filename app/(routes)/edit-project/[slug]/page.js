@@ -1,5 +1,5 @@
 import { unstable_noStore } from "next/cache";
-import { fetchProject } from "@/shared/utils/fetchProject";
+import { fetchProject } from "@/lib/shared/fetchProject";
 import { EditProjectBreadcrumb } from "./_components/edit-project-breadcrumb";
 import { EditProjectForm } from "./_components/edit-project-form";
 

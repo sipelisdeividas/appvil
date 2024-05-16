@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { TableItem } from "./table-item";
-import { fetchProjects } from "@/shared/utils/fetchProjects";
+import { fetchProjects } from "@/lib/shared/fetchProjects";
 
 export async function DashboardTable() {
   const { projects } = await fetchProjects();
@@ -29,10 +29,10 @@ export async function DashboardTable() {
         {projects.map((project) => (
           <TableItem
             key={project._id}
-            _id={project._id ?? ""}
-            name={project.name ?? ""}
-            banner={project.banner ?? ""}
-            slug={project.slug ?? ""}
+            _id={project._id}
+            name={project.name}
+            banner={project.banner}
+            slug={project.slug}
           />
         ))}
       </TableBody>

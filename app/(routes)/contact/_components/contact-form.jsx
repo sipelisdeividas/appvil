@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -76,7 +75,7 @@ export function ContactForm() {
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
                   <FormLabel className="text-sm text-neutral-600 dark:text-neutral-300 bg-opacity-50">
-                    Vardas *
+                    Vardas <span className="text-red-400">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input {...field} />
@@ -92,7 +91,7 @@ export function ContactForm() {
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
                   <FormLabel className="text-sm text-neutral-600 dark:text-neutral-300 bg-opacity-50">
-                    Pavardė *
+                    Pavardė <span className="text-red-400">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input {...field} />
@@ -109,7 +108,7 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem className="items-center justify-center w-full">
                 <FormLabel className="text-sm text-neutral-600 dark:text-neutral-300 bg-opacity-50">
-                  El. paštas *
+                  El. paštas <span className="text-red-400">*</span>
                 </FormLabel>
                 <FormControl>
                   <Input {...field} />
@@ -125,7 +124,7 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem className="items-center justify-center w-full">
                 <FormLabel className="text-sm text-neutral-600 dark:text-neutral-300 bg-opacity-50">
-                  Žinutė *
+                  Žinutė <span className="text-red-400">*</span>
                 </FormLabel>
                 <FormControl>
                   <Textarea style={{ height: "100px" }} {...field} />
@@ -135,17 +134,10 @@ export function ContactForm() {
             )}
           />
 
-          <div className="flex space-x-4 items-center">
-            <Checkbox />
-            <span className="text-xs font-light">
-              Sutinku su privatumo politika.
-            </span>
-          </div>
-
           <div className="flex items-center gap-4">
             <Button
               type="submit"
-              className="text-sm font-light"
+              className="text-sm font-light mt-2"
               disabled={loading}
               onClick={() => form.handleSubmit(onSubmit)}
             >

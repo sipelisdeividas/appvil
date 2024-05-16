@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { slugify } from "@/shared/utils/slugify";
 import connect from "@/db";
 import Project from "@/db/models/Project";
 
@@ -12,9 +13,13 @@ export async function POST(request) {
     thirdImage,
     fourthImage,
   } = await request.json();
+
+  const slug = slugify(name);
+
   await connect();
   await Project.create({
     name,
+    slug,
     banner,
     description,
     firstImage,

@@ -5,8 +5,8 @@ import { EditProjectForm } from "./_components/edit-project-form";
 
 export default async function AddProjectPage({ params }) {
   unstable_noStore();
-  const { name: paramName } = params;
-  const { project } = await fetchProject(paramName);
+  const { slug } = params;
+  const { project } = await fetchProject(slug);
   const {
     name,
     banner,
@@ -16,6 +16,7 @@ export default async function AddProjectPage({ params }) {
     thirdImage,
     fourthImage,
   } = project;
+
   return (
     <div className="container mx-auto w-full items-center justify-center antialiased overflow-hidden drop-shadow-sm pt-24 md:pt-36">
       <EditProjectBreadcrumb />

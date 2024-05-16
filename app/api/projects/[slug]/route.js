@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
 import connect from "@/db";
 import Project from "@/db/models/Project";
+import { slugify } from "@/shared/utils/slugify";
 
 export async function GET(request, { params }) {
-  const { name } = params;
+  const { slug } = params;
   await connect();
-  const project = await Project.findOne({ name });
+  const project = await Project.findOne({ slug });
   return NextResponse.json({ project }, { status: 200 });
 }
 
 export async function PUT(request, { params }) {
   await connect();
-  const { name: projectName } = params;
+  const { slug } = params;
   const {
     name,
     description,
@@ -32,7 +33,11 @@ export async function PUT(request, { params }) {
     fourthImage,
   };
 
-  await Project.updateOne({ name: projectName }, { $set: updateFields });
+  if (name) {
+    updateFields.slug = slugify(name);
+  }
+
+  await Project.updateOne({ name: slug }, { $set: updateFields });
 
   // await Project.findByIdAndUpdate(id, {
   //   name,

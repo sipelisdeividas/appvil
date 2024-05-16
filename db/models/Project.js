@@ -6,6 +6,9 @@ const projectSchema = new Schema(
       type: String,
       required: true,
     },
+    slug: {
+      type: String,
+    },
     banner: {
       type: String,
       required: true,

@@ -59,7 +59,7 @@ export function Navbar({ className }) {
                       <div key={project._id}>
                         <ProjectItem
                           title={project.name ?? ""}
-                          href={`/projects/${project.name ?? ""}`}
+                          href={`/projects/${project.slug ?? ""}`}
                           src={project.banner ?? ""}
                           description={project.description ?? ""}
                         />

@@ -121,7 +121,7 @@ export const ProjectCard = ({ project, translate }) => {
     >
       <Link
         className="block group-hover/project:shadow-2xl"
-        href={`/projects/${project.name}`}
+        href={`/projects/${project.slug}`}
         aria-label={`Pamatykite projektą ${project.name}`}
       >
         <Image

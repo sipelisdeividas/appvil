@@ -9,9 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslation } from "react-i18next";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <DropdownMenu>
@@ -27,19 +29,19 @@ export function ModeToggle() {
           className="cursor-pointer"
           onClick={() => setTheme("light")}
         >
-          Šviesi
+          {t("theme_light")}
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer"
           onClick={() => setTheme("dark")}
         >
-          Tamsi
+          {t("theme_dark")}
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer"
           onClick={() => setTheme("system")}
         >
-          Sistemos
+          {t("theme_system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

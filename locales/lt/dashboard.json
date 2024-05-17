@@ -1,0 +1,12 @@
+{
+  "delete_cancel": "Atšaukti",
+  "delete_description": "Šio veiksmo anuliuoti negalima. Tai visam laikui ištrins projektą ir pašalins duomenis iš mūsų serverių.",
+  "delete_submit": "Taip, ištrinti",
+  "delete_title": "Ar esate visiškai tikri?",
+  "delete_toast_description": "Projektas sėkmingai pašalintas!",
+  "delete_toast_success": "Projektas pašalintas",
+  "table_actions": "Veiksmai",
+  "table_empty": "Projektų sąrašas tuščias.",
+  "table_logo": "Logotipas",
+  "table_title": "Pavadinimas"
+}

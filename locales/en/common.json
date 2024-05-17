@@ -1,0 +1,21 @@
+{
+  "add_project": "adding a project",
+  "add_toast_success": "Project added",
+  "all_jobs": "all works",
+  "beginning": "beginning",
+  "communication": "communication",
+  "dashboard": "dashboard",
+  "edit_project": "Editing the project",
+  "footer_rights": "All rights reserved",
+  "logout": "logout",
+  "mob_nav_title": "When we write - we create",
+  "our_works": "Our works\n",
+  "read_more": "Read more",
+  "theme_dark": "dark",
+  "theme_light": "light",
+  "theme_system": "system",
+  "toast_description": "The new project has been successfully added!",
+  "update_toast_description": "The project has been successfully updated!",
+  "update_toast_success": "Project updated",
+  "view_project": "View project"
+}

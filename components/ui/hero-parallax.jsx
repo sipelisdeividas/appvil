@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   motion,
   useScroll,
@@ -93,15 +94,16 @@ export const HeroParallax = ({ projects }) => {
 };
 
 export const Header = () => {
+  const { t } = useTranslation();
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-4xl sm:text-6xl md:text-7xl uppercase font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
-        Jūsų sumanias <br /> idėjas paversime <br />
-        <span className="text-primary">išmaniomis</span>
+        {t("hero_title_1")}
+        <br /> {t("hero_title_2")} <br />
+        <span className="text-primary">{t("hero_title_3")}</span>
       </h1>
       <p className="max-w-2xl text-base md:text-lg mt-8 text-neutral-600 dark:text-neutral-300">
-        Kai rašome - mes kuriame. Naujausios technologijos ir Jūsų norai, tai
-        mūsų prioritetas.
+        {t("hero_description")}
       </p>
     </div>
   );

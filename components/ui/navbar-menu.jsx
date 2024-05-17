@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const transition = {
   type: "spring",
@@ -15,6 +16,7 @@ const transition = {
 };
 
 export const MenuItem = ({ setActive, active, item, children }) => {
+  const { t } = useTranslation();
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
@@ -48,7 +50,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
                     className="flex justify-center items-center text-center text-xl py-2 px-2 uppercase text-black dark:text-white"
                     href="/projects"
                   >
-                    Visi darbai <ArrowRight className="w-5 h-5 ml-2" />
+                    {t("all_jobs")} <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               </motion.div>
@@ -72,6 +74,8 @@ export const Menu = ({ setActive, children }) => {
 };
 
 export const ProjectItem = ({ title, href, src }) => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Link href={href} className="flex space-x-2">
@@ -88,7 +92,7 @@ export const ProjectItem = ({ title, href, src }) => {
             {title}
           </h4>
           <p className="text-neutral-700 text-sm dark:text-neutral-300">
-            Peržiūrėti projektą
+            {t("view_project")}
           </p>
         </div>
       </Link>

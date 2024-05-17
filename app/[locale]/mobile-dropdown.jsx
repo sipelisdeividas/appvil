@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { UserDropdown } from "./user-dropdown";
 import { useSession } from "next-auth/react";
+import LanguageToggle from "@/components/lang-toggle";
 
 export function MobileDropDown() {
   const session = useSession();
@@ -77,8 +78,9 @@ export function MobileDropDown() {
             )}
           </ul>
         </div>
-        <SheetFooter className="flex justify-center items-center">
+        <SheetFooter className="flex justify-center items-center gap-2">
           <ModeToggle />
+          <LanguageToggle />
         </SheetFooter>
       </SheetContent>
     </Sheet>

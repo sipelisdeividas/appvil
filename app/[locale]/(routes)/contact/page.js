@@ -5,7 +5,7 @@ import { unstable_noStore } from "next/cache";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/translations-provider";
 
-const i18mNamespaces = ["contact", "common"];
+const i18mNamespaces = ["contact", "common", "page-meta"];
 
 export default async function ContactsPage({ params: { locale } }) {
   unstable_noStore();
@@ -36,6 +36,10 @@ export default async function ContactsPage({ params: { locale } }) {
   );
 }
 
-export const metadata = {
-  title: "Susisiekimas",
-};
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, i18mNamespaces);
+
+  return {
+    title: t("page-meta:contact_meta"),
+  };
+}

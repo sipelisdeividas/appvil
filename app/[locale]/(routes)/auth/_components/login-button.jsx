@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
+import { useTranslation } from "react-i18next";
 
 export function LoginButton() {
+  const { t } = useTranslation();
   return (
     <div className="w-full flex-1 mt-8">
       <div className="flex flex-col items-center">
@@ -33,7 +35,7 @@ export function LoginButton() {
               />
             </svg>
           </div>
-          <span className="ml-4">Jungtis Su Google</span>
+          <span className="ml-4">{t("login_button")}</span>
         </Button>
       </div>
     </div>

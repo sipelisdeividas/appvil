@@ -15,6 +15,7 @@ export const HeroParallax = ({ projects }) => {
   const firstRow = projects.slice(0, 5);
   const secondRow = projects.slice(5, 10);
   const thirdRow = projects.slice(10, 15);
+  const fourthRow = projects.slice(15, 20);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -50,7 +51,7 @@ export const HeroParallax = ({ projects }) => {
   return (
     <div
       ref={ref}
-      className="h-full py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[250vh] md:h-[320vh] py-72 md:py-96 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -61,7 +62,7 @@ export const HeroParallax = ({ projects }) => {
           opacity,
         }}
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse md:space-x-reverse md:space-x-20 md:mb-20">
           {firstRow.map((project) => (
             <ProjectCard
               project={project}
@@ -70,7 +71,7 @@ export const HeroParallax = ({ projects }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row md:mb-20 md:space-x-20 ">
           {secondRow.map((project) => (
             <ProjectCard
               project={project}
@@ -79,8 +80,17 @@ export const HeroParallax = ({ projects }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse md:space-x-reverse m:space-x-20 md:mb-20">
           {thirdRow.map((project) => (
+            <ProjectCard
+              project={project}
+              translate={translateX}
+              key={project.name}
+            />
+          ))}
+        </motion.div>
+        <motion.div className="flex flex-row-reverse md:space-x-reverse md:space-x-20">
+          {fourthRow.map((project) => (
             <ProjectCard
               project={project}
               translate={translateX}
@@ -96,7 +106,7 @@ export const HeroParallax = ({ projects }) => {
 export const Header = () => {
   const { t } = useTranslation();
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto px-4 w-full left-0 top-0">
       <h1 className="text-4xl sm:text-6xl md:text-7xl uppercase font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
         {t("hero_title_1")}
         <br /> {t("hero_title_2")} <br />
@@ -119,10 +129,10 @@ export const ProjectCard = ({ project, translate }) => {
         y: -20,
       }}
       key={project.name}
-      className="group/project h-96 w-[30rem] relative flex-shrink-0"
+      className="group h-80 md:h-96 w-[20rem] md:w-[30rem] relative flex-shrink-0"
     >
       <Link
-        className="block group-hover/project:shadow-2xl"
+        className="block md:group-hover:shadow-2xl"
         href={`/projects/${project.slug}`}
         aria-label={`Pamatykite projektą ${project.name}`}
       >
@@ -130,12 +140,12 @@ export const ProjectCard = ({ project, translate }) => {
           src={project.banner}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="absolute h-52 w-56 md:h-full md:w-full inset-0 rounded"
           alt={project.name}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/project:opacity-100 text-white">
+      <div className="absolute inset-0 h-full w-full opacity-0 md:group-hover:opacity-80 bg-black pointer-events-none"></div>
+      <h2 className="absolute bottom-4 left-4 opacity-0 md:group-hover:opacity-100 text-white">
         {project.name}
       </h2>
     </motion.div>

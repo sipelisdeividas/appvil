@@ -45,7 +45,6 @@ export const MenuItem = ({ setActive, active, item, children }) => {
                   {children}
                 </motion.div>
                 <div className="flex justify-center items-center text-center pb-6">
-                  {" "}
                   <Link
                     className="flex justify-center items-center text-center text-xl py-2 px-2 uppercase text-black dark:text-white"
                     href="/projects"
@@ -65,7 +64,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 export const Menu = ({ setActive, children }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
+      onMouseLeave={() => setActive(null)}
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
     >
       {children}

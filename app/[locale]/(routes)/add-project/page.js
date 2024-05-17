@@ -4,7 +4,7 @@ import { AddProjectBreadcrumb } from "./_components/add-project-breadcrumb";
 import TranslationsProvider from "@/components/translations-provider";
 import initTranslations from "@/app/i18n";
 
-const i18mNamespaces = ["common", "adding"];
+const i18mNamespaces = ["common", "adding", "page-meta"];
 
 export default async function AddProjectPage({ params: { locale } }) {
   unstable_noStore();
@@ -30,6 +30,10 @@ export default async function AddProjectPage({ params: { locale } }) {
   );
 }
 
-export const metadat = {
-  title: "Projekto Pridėjimas",
-};
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, i18mNamespaces);
+
+  return {
+    title: t("page-meta:add_project_meta"),
+  };
+}

@@ -1,35 +1,20 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Menu, MenuItem, ProjectItem } from "@/components/ui/navbar-menu";
+import { Menu } from "@/components/ui/navbar-menu";
 import { MobileDropDown } from "./mobile-dropdown";
 import { UserDropdown } from "./user-dropdown";
-import { APP_NAME } from "@/lib/config";
 import LanguageToggle from "@/components/lang-toggle";
 
 export function Navbar({ className }) {
   const [active, setActive] = useState(null);
-  const [projects, setProjects] = useState([]);
   const { status } = useSession();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const res = await axios.get(`${APP_NAME}/api/projects`);
-        setProjects(res.data.projects);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-      }
-    };
-    fetchProjects();
-  }, []);
 
   return (
     <div
@@ -50,26 +35,15 @@ export function Navbar({ className }) {
             <MobileDropDown />
           </span>
           <div className="hidden sm:block">
-            <ul className="flex items-center space-x-10 uppercase">
+            <ul className="flex items-center space-x-5 uppercase">
               <li>
-                <MenuItem
-                  setActive={setActive}
-                  active={active}
-                  item={t("our_works")}
+                <Link
+                  href="/projects"
+                  className="hover:text-primary"
+                  aria-label="Susisiekite su mumis"
                 >
-                  <div className="text-sm grid grid-cols-2 gap-10 p-4">
-                    {projects.slice(-4).map((project) => (
-                      <div key={project._id}>
-                        <ProjectItem
-                          title={project.name}
-                          href={`/projects/${project.slug}`}
-                          src={project.banner}
-                          description={project.description}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </MenuItem>
+                  {t("our_works")}
+                </Link>
               </li>
               <li>
                 <Link
@@ -86,10 +60,10 @@ export function Navbar({ className }) {
                 </li>
               )}
               <li>
-                <ModeToggle />
+                <LanguageToggle />
               </li>
               <li>
-                <LanguageToggle />
+                <ModeToggle />
               </li>
             </ul>
           </div>

@@ -1,7 +1,7 @@
 {
   "add_project": "Projekto pridėjimas",
   "add_toast_success": "Projektas pridėtas",
-  "all_jobs": "atlikti darbai",
+  "all_jobs": "Visi darbai",
   "beginning": "pradžia",
   "communication": "susisiekimas",
   "dashboard": "Valdymo skydelis",
@@ -9,7 +9,7 @@
   "footer_rights": "Visos teisės saugomos",
   "logout": "Atsijungti",
   "mob_nav_title": "Kai rašome – kuriame",
-  "our_works": "Mūsų darbai\n",
+  "our_works": "Atlikti darbai\n",
   "read_more": "Skaityti daugiau",
   "theme_dark": "tamsi",
   "theme_light": "šviesi",
@@ -17,5 +17,8 @@
   "toast_description": "Naujas projektas sėkmingai pridėtas!",
   "update_toast_description": "Projektas sėkmingai atnaujintas!",
   "update_toast_success": "Projektas atnaujintas",
-  "view_project": "Žiūrėti projektą"
+  "view_project": "Žiūrėti projektą",
+  "login": "Prisijungimas",
+  "login_button": "Jungtis Su Google",
+  "logout_header": "Atsijungimas"
 }

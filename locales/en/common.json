@@ -17,5 +17,8 @@
   "toast_description": "The new project has been successfully added!",
   "update_toast_description": "The project has been successfully updated!",
   "update_toast_success": "Project updated",
-  "view_project": "View project"
+  "view_project": "View project",
+  "login": "Login",
+  "login_button": "Login With Google",
+  "logout_header": "Logout"
 }

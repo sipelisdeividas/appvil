@@ -4,7 +4,7 @@ import { ProjectsBreadcrumb } from "./_components/projects-breadcrumb";
 import { ProjectsCard } from "./_components/projects-card";
 import initTranslations from "@/app/i18n";
 
-const i18mNamespaces = ["common"];
+const i18mNamespaces = ["common", "page-meta"];
 
 export default async function ProjectsPage({ params: { locale } }) {
   unstable_noStore();
@@ -35,6 +35,10 @@ export default async function ProjectsPage({ params: { locale } }) {
   );
 }
 
-export const metadata = {
-  title: "Atlikti Darbai",
-};
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, i18mNamespaces);
+
+  return {
+    title: t("page-meta:projects_meta"),
+  };
+}

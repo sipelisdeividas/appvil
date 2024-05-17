@@ -37,9 +37,13 @@ export default function LanguageToggle() {
   };
 
   return (
-    <select className="py-1 px-2" onChange={handleChange} value={currentLocale}>
-      <option value="en">EN</option>
+    <select
+      className="py-1 px-2 cursor-pointer"
+      onChange={handleChange}
+      value={currentLocale}
+    >
       <option value="lt">LT</option>
+      <option value="en">EN</option>
     </select>
   );
 }

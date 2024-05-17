@@ -27,14 +27,14 @@ export function UserDropdown() {
         <DropdownMenuContent>
           <DropdownMenuLabel>{session.data?.user?.name}</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem asChild className="cursor-pointer">
+          <DropdownMenuItem asChild className="cursor-pointer uppercase">
             <Link href="/dashboard">
               <LayoutDashboard className="mr-2" />
               {t("dashboard")}
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer uppercase"
             onClick={() =>
               signOut({
                 callbackUrl: "/",

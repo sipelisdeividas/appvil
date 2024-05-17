@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function LogoSection() {
+export async function LogoSection() {
   return (
     <div>
       <Image

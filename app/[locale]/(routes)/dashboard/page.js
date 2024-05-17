@@ -3,9 +3,8 @@ import { DashboardBreadcrumb } from "./_components/dashboard-breadcrumb";
 import { DashboardHeader } from "./_components/dashboard-header";
 import { DashboardTable } from "./_components/dashboard-table";
 import initTranslations from "@/app/i18n";
-import TranslationsProvider from "@/components/translations-provider";
 
-const i18mNamespaces = ["common, dashboard"];
+const i18mNamespaces = ["common", "dashboard", "page-meta"];
 
 export default async function DashboardPage({ params: { locale } }) {
   unstable_noStore();
@@ -19,6 +18,10 @@ export default async function DashboardPage({ params: { locale } }) {
   );
 }
 
-export const metadata = {
-  title: "Valdymo Skydelis",
-};
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, i18mNamespaces);
+
+  return {
+    title: t("page-meta:dashboard_meta"),
+  };
+}

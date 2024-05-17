@@ -5,7 +5,7 @@ import { EditProjectForm } from "./_components/edit-project-form";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/translations-provider";
 
-const i18mNamespaces = ["common", "adding"];
+const i18mNamespaces = ["common", "adding", "page-meta"];
 
 export default async function EditProjectPage({ params }) {
   unstable_noStore();
@@ -51,6 +51,10 @@ export default async function EditProjectPage({ params }) {
   );
 }
 
-export const metadata = {
-  title: "Projekto Redagavimas",
-};
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, i18mNamespaces);
+
+  return {
+    title: t("page-meta:edit_project_meta"),
+  };
+}

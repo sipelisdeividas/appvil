@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
+import { useTranslation } from "react-i18next";
 
-export function LogoutButton() {
+export async function LogoutButton() {
+  const { t } = useTranslation();
   return (
     <div className="w-full flex-1 mt-8">
       <div className="flex flex-col items-center">
@@ -33,7 +35,7 @@ export function LogoutButton() {
               />
             </svg>
           </div>
-          <span className="ml-4">Atsijungti</span>
+          <span className="ml-4">{t("logout")}</span>
         </Button>
       </div>
     </div>

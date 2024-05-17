@@ -51,7 +51,7 @@ export const HeroParallax = ({ projects }) => {
   return (
     <div
       ref={ref}
-      className="h-[250vh] md:h-[320vh] py-72 md:py-96 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[200vh] md:h-[320vh] py-96 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -80,7 +80,7 @@ export const HeroParallax = ({ projects }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse md:space-x-reverse m:space-x-20 md:mb-20">
+        <motion.div className="flex flex-row-reverse md:space-x-reverse md:space-x-20 md:mb-20">
           {thirdRow.map((project) => (
             <ProjectCard
               project={project}

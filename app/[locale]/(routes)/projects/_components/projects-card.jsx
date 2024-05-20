@@ -14,7 +14,7 @@ export async function ProjectsCard({ name, banner, slug, locale }) {
           <CardBody className="relative group/card w-auto h-auto rounded-xl lg:p-10">
             <CardItem
               translateZ="20"
-              className="text-xl font-bold text-neutral-600 dark:text-white overflow-hidden"
+              className="text-2xl font-bold text-neutral-600 dark:text-white overflow-hidden"
             >
               {name}
             </CardItem>

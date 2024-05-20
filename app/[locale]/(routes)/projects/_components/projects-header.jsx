@@ -9,7 +9,7 @@ export function ProjectsHeader() {
   const { t } = useTranslation();
   const session = useSession();
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mb-2">
       <h1 className="text-3xl uppercase font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
         {t("our_works")}
       </h1>

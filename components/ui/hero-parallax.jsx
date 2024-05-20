@@ -51,7 +51,7 @@ export const HeroParallax = ({ projects }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-72 md:py-[410px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-full py-72 md:py-[410px] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -89,15 +89,6 @@ export const HeroParallax = ({ projects }) => {
             />
           ))}
         </motion.div>
-        {/* <motion.div className="flex flex-row-reverse md:space-x-reverse md:space-x-20">
-          {fourthRow.map((project) => (
-            <ProjectCard
-              project={project}
-              translate={translateX}
-              key={project.name}
-            />
-          ))}
-        </motion.div> */}
       </motion.div>
     </div>
   );
@@ -129,17 +120,19 @@ export const ProjectCard = ({ project, translate }) => {
         y: -20,
       }}
       key={project.name}
-      className="group h-96 w-[20rem] md:w-[30rem] relative flex-shrink-0"
+      className="group h-[450px] w-[20rem] md:w-[30rem] relative flex-shrink-0"
     >
       <Link
         className="block md:group-hover:shadow-2xl"
         href={`/projects/${project.slug}`}
         aria-label={`Pamatykite projektą ${project.name}`}
       >
-        <img
-          src={project.banner}
-          className="absolute h-52 w-56 md:h-full md:w-full inset-0 rounded"
+        <Image
+          height="600"
+          width="600"
+          className="object-cover absolute h-52 w-56 md:h-full md:w-full inset-0 rounded"
           alt={project.name}
+          src={project.banner}
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 md:group-hover:opacity-80 bg-black pointer-events-none"></div>

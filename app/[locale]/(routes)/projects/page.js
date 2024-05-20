@@ -22,7 +22,7 @@ export default async function ProjectsPage({ params: { locale } }) {
       <div className="container mx-auto w-full items-center justify-center antialiased overflow-hidden drop-shadow-sm pt-24 md:pt-36">
         <ProjectsBreadcrumb locale={locale} />
         <ProjectsHeader />
-        <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2">
           {projects.map((project) => (
             <div key={project._id}>
               <ProjectsCard

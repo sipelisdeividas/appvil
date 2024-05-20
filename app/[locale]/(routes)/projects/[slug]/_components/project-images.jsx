@@ -11,13 +11,9 @@ export function ProjectImages({
 }) {
   return (
     <div>
-      <img
-        className="rounded-lg "
-        width="520"
-        height="400"
-        src={banner}
-        alt={name}
-      />
+      <div>
+        <img className="rounded-lg h-auto w-[520px]" src={banner} alt={name} />
+      </div>
       <div className="grid grid-cols-4 md:grid-cols-5 gap-2 mt-4">
         {[firstImage, secondImage, thirdImage, fourthImage].map(
           (image, index) =>

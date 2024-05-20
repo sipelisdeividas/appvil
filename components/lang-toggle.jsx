@@ -38,7 +38,7 @@ export default function LanguageToggle() {
 
   return (
     <>
-      <label for="lang-select"></label>
+      {/* <label htmlFor="lang-select"></label> */}
       <select
         id="lang-select"
         className="py-1 px-2 cursor-pointer"

@@ -15,7 +15,8 @@ export default async function EditProjectPage({ params }) {
   const {
     name,
     banner,
-    description,
+    descriptionLt,
+    descriptionEn,
     firstImage,
     secondImage,
     thirdImage,
@@ -39,7 +40,8 @@ export default async function EditProjectPage({ params }) {
           <EditProjectForm
             name={name}
             banner={banner}
-            description={description}
+            descriptionLt={descriptionLt}
+            descriptionEn={descriptionEn}
             firstImage={firstImage}
             secondImage={secondImage}
             thirdImage={thirdImage}

@@ -15,7 +15,8 @@ export async function PUT(request, { params }) {
   const { slug } = params;
   const {
     name,
-    description,
+    descriptionLt,
+    descriptionEn,
     banner,
     firstImage,
     secondImage,
@@ -25,7 +26,8 @@ export async function PUT(request, { params }) {
 
   const updateFields = {
     name,
-    description,
+    descriptionLt,
+    descriptionEn,
     banner,
     firstImage,
     secondImage,

@@ -28,7 +28,7 @@ export function RemoveButton({ _id }) {
       router.refresh();
       toast({
         title: t("dashboard:delete_toast_success"),
-        description: t("The project was successfully removed!"),
+        description: t("dashboard:delete_toast_description"),
       });
     } catch (error) {
       console.error("Error removing project:", error);

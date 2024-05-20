@@ -83,7 +83,7 @@ export function ContactForm() {
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
-                  <FormMessage />
+                  {/* <FormMessage /> */}
                 </FormItem>
               )}
             />
@@ -100,7 +100,7 @@ export function ContactForm() {
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
-                  <FormMessage />
+                  {/* <FormMessage /> */}
                 </FormItem>
               )}
             />
@@ -118,7 +118,7 @@ export function ContactForm() {
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
-                <FormMessage />
+                {/* <FormMessage /> */}
               </FormItem>
             )}
           />
@@ -135,7 +135,7 @@ export function ContactForm() {
                 <FormControl>
                   <Textarea style={{ height: "100px" }} {...field} />
                 </FormControl>
-                <FormMessage />
+                {/* <FormMessage /> */}
               </FormItem>
             )}
           />

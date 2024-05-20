@@ -16,6 +16,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { crudSchema } from "@/lib/shared/form/crudSchema";
 import { APP_NAME } from "@/lib/config";
 import { useTranslation } from "react-i18next";
+import { Textarea } from "@/components/ui/textarea";
 
 export function AddProjectForm() {
   const { toast } = useToast();
@@ -27,7 +28,8 @@ export function AddProjectForm() {
     defaultValues: {
       name: "",
       banner: "",
-      description: "",
+      descriptionLt: "",
+      descriptionEn: "",
       firstImage: "",
       secondImage: "",
       thirdImage: "",
@@ -97,17 +99,38 @@ export function AddProjectForm() {
         />
         <FormField
           control={form.control}
-          name="description"
+          name="descriptionLt"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input
-                  placeholder={`${t("adding:desc_placeholder")}`}
+                <Textarea
+                  style={{ height: "100px" }}
                   {...field}
+                  placeholder={`${t("adding:desc_placeholder")}`}
                 />
               </FormControl>
               <FormDescription>
-                {t("adding:project_description")}{" "}
+                {t("adding:project_description_lt")}{" "}
+                <span className="text-red-400">*</span>
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="descriptionEn"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Textarea
+                  style={{ height: "100px" }}
+                  {...field}
+                  placeholder={`${t("adding:desc_placeholder")}`}
+                />
+              </FormControl>
+              <FormDescription>
+                {t("adding:project_description_en")}{" "}
                 <span className="text-red-400">*</span>
               </FormDescription>
               <FormMessage />

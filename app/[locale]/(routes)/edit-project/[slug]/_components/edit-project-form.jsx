@@ -16,11 +16,13 @@ import { useToast } from "@/components/ui/use-toast";
 import { crudSchema } from "@/lib/shared/form/crudSchema";
 import { APP_NAME } from "@/lib/config";
 import { useTranslation } from "react-i18next";
+import { Textarea } from "@/components/ui/textarea";
 
 export function EditProjectForm({
   name,
   banner,
-  description,
+  descriptionLt,
+  descriptionEn,
   firstImage,
   secondImage,
   thirdImage,
@@ -35,7 +37,8 @@ export function EditProjectForm({
     defaultValues: {
       name: name,
       banner: banner,
-      description: description,
+      descriptionLt: descriptionLt,
+      descriptionEn: descriptionEn,
       firstImage: firstImage,
       secondImage: secondImage,
       thirdImage: thirdImage,
@@ -103,17 +106,38 @@ export function EditProjectForm({
         />
         <FormField
           control={form.control}
-          name="description"
+          name="descriptionLt"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input
-                  placeholder="Ieškok komunikacijos, tai programėlė skirta susirasti antrąją pusę."
+                <Textarea
+                  style={{ height: "100px" }}
                   {...field}
+                  placeholder={`${t("adding:desc_placeholder")}`}
                 />
               </FormControl>
               <FormDescription>
-                {t("adding:project_description")}{" "}
+                {t("adding:project_description_lt")}{" "}
+                <span className="text-red-400">*</span>
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="descriptionEn"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Textarea
+                  style={{ height: "100px" }}
+                  {...field}
+                  placeholder={`${t("adding:desc_placeholder")}`}
+                />
+              </FormControl>
+              <FormDescription>
+                {t("adding:project_description_en")}{" "}
                 <span className="text-red-400">*</span>
               </FormDescription>
               <FormMessage />

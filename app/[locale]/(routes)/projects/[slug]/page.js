@@ -15,7 +15,7 @@ export default async function ProjectPage({ params }) {
   return (
     <div className="container mx-auto w-full items-center justify-center antialiased pb-8 md:pb-0 pt-24 md:pt-36">
       <ProjectBreadcrumb name={project.name} locale={locale} />
-      <section className="container mx-auto px-4 md:px-6 py-8">
+      <section className="container mx-auto px-4 md:px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-0 items-start">
           <ProjectImages
             name={project.name}
@@ -28,7 +28,7 @@ export default async function ProjectPage({ params }) {
           <div>
             <h1 className="text-3xl font-bold">{project.name}</h1>
             <p className="mt-4 text-zinc-500 dark:text-zinc-400">
-              {project.description}
+              {locale === "lt" ? project.descriptionLt : project.descriptionEn}
             </p>
           </div>
         </div>

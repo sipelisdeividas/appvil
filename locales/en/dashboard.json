@@ -6,7 +6,7 @@
   "delete_toast_description": "The project was successfully removed!",
   "delete_toast_success": "Project removed",
   "table_actions": "Actions",
-  "table_empty": "The list of projects is empty.",
+  "table_empty": "The list of projects is empty",
   "table_logo": "Logo",
   "table_title": "Title"
 }

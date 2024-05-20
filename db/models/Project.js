@@ -13,7 +13,11 @@ const projectSchema = new Schema(
       type: String,
       required: true,
     },
-    description: {
+    descriptionLt: {
+      type: String,
+      required: true,
+    },
+    descriptionEn: {
       type: String,
       required: true,
     },

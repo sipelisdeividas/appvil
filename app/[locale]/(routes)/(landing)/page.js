@@ -5,6 +5,7 @@ import { ContactSection } from "./_components/contact-section";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/translations-provider";
+import { MobileHero } from "./_components/mob-hero";
 
 const i18mNamespaces = ["home"];
 
@@ -19,7 +20,14 @@ export default async function LandingPage({ params: { locale } }) {
         locale={locale}
         namespaces={i18mNamespaces}
       >
-        <HeroParallax projects={projects} />
+        {/* PC screens */}
+        <div className="hidden lg:block">
+          <HeroParallax projects={projects} />
+        </div>
+        {/* Mobile screens */}
+        <div className="block lg:hidden">
+          <MobileHero locale={locale} />
+        </div>
         <ScrollableHero locale={locale} />
         <ContactSection locale={locale} />
       </TranslationsProvider>

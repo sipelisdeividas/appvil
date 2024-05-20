@@ -1,1 +1,18 @@
-{"contact_address":"Address","contact_contacts":"Contacts","contact_email":"Email: info@appvil.eu","contact_phone":"Phone: +370 612 26080","contact_street":"32566, J. Žemgulis str. 46 -108, 35239 Panevėžys","contact_time":"Working Hours","contact_time_west":"9:00AM - 5:00PM","contact_title":"You will find us","hero_description":"When we write - we create. The latest technologies and your wishes are our priority.","hero_title_1":"We Will Turn Your","hero_title_2":"Smart Ideas Into","hero_title_3":"Creative Ones","rest_days":"Saturday - Sunday: We Are Closed","tablet_span":"We stand out in\n","tablet_title":"Mobile application development","working_days":"Monday - Friday"}
+{
+  "contact_address": "Address",
+  "contact_contacts": "Contacts",
+  "contact_email": "Email: info@appvil.eu",
+  "contact_phone": "Phone: +370 612 26080",
+  "contact_street": "32566, J. Žemgulis str. 46 -108, 35239 Panevėžys",
+  "contact_time": "Working Hours",
+  "contact_time_west": "9:00AM - 5:00PM",
+  "contact_title": "You will find us",
+  "hero_description": "When we write - we create. The latest technologies and your wishes are our priority.",
+  "hero_title_1": "We Will Turn Your",
+  "hero_title_2": "Smart Ideas Into",
+  "hero_title_3": "Creative Ones",
+  "rest_days": "Saturday - Sunday: We Are Closed",
+  "tablet_span": "Latest And Fastest",
+  "tablet_title": "Mobile and Web Applications",
+  "working_days": "Monday - Friday"
+}

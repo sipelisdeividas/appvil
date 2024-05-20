@@ -22,8 +22,8 @@ export async function ScrollableHero({ locale }) {
         }
       >
         <Image
-          src="https://res.cloudinary.com/dp0m5mp1s/image/upload/v1715443872/Appvil/logos/home/appvil-mobilieji_zqvx9t.webp"
-          alt="hero"
+          src="https://res.cloudinary.com/dp0m5mp1s/image/upload/v1716219836/Appvil/logos/home/appvil_about_by_ds_hoqkb6.webp"
+          alt="Appvil Services"
           height="1447"
           width="2048"
           className="mx-auto rounded-2xl object-cover h-full object-left-top"
